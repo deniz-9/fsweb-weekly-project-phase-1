@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import ClothingItem from "./components/ClothingItem";
+import ColorSelector from "./components/ColorSelector";
+import SizeSelector from "./components/SizeSelector";
+import QuantitySelector from "./components/QuantitySelector";
 
-function App() {
-  const [count, setCount] = useState(0)
+import "./App.css";
+
+const App = () => {
+  const [selectedColor, setSelectedColor] = useState("");
+  const [selectedSize, setSelectedSize] = useState("");
+  const [selectedQuantity, setSelectedQuantity] = useState(1);
+
+  const handleColorChange = (color) => {
+    setSelectedColor(color);
+  };
+
+  const handleSizeChange = (size) => {
+    setSelectedSize(size);
+  };
+
+  const imageUrl = selectedColor ? `URL_${selectedColor}` : "";
+  const handleQuantityChange = (quantity) => {
+    setSelectedQuantity(quantity);
+  };
+
+  const handleSubmit = () => {
+    console.log("Renk:", selectedColor);
+    console.log("Beden:", selectedSize);
+    console.log("Adet:", selectedQuantity);
+  };
+
+  const colors = ["red", "blue", "green", "yellow", "orange", "purple", "black", "white", "gray", "pink", "brown", "teal", "navy", "maroon"];
+  const sizes = ["small", "medium", "large", "extra large", "XXL"];
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="app">
+      <div className="left-section">
+        <ClothingItem imageUrl="./assets/variations/beige.png" />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+      <div className="right-section">
+        <p className="price">$70.00</p>
+        <ColorSelector colors={colors} onColorChange={handleColorChange} />
+        {selectedColor && <ClothingItem imageUrl="./assets/variations/beige.png" />}
+        <SizeSelector sizes={sizes} onSizeChange={handleSizeChange} />
+        <QuantitySelector onQuantityChange={handleQuantityChange} />
+        <button className="add-to-cart" onClick={handleSubmit}>
+          Add To Cart
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default App
+export default App;
