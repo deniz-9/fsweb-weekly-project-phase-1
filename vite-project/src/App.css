@@ -4,7 +4,7 @@
   align-items: center;
   padding: 20px;
   border: 1px solid #ccc;
-  /* background-color: whitesmoke; */
+  
 }
 
 .left-section,
@@ -48,3 +48,17 @@
   border-radius: 50%;
   display: inline
 }
+
+body {
+  background-color: white;
+  color: black;
+}
+
+
+  .size-option {
+    margin: 10px; 
+  }
+
+ .plus-button {
+  margin: 10px;
+ }

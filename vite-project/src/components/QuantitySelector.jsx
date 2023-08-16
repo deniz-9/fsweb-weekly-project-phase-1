@@ -22,9 +22,9 @@ const QuantitySelector = ({ selectedQuantity, onQuantityChange }) => {
   return (
     <div className="quantity-selector">
       <p>Adet Seç</p>
-      <button onClick={handleDecrement}>-</button>
+      <button className="plus-button" onClick={handleDecrement}>-</button>
       <span>{quantity}</span>
-      <button onClick={handleIncrement}>+</button>
+      <button className="plus-button" onClick={handleIncrement}>+</button>
     </div>
   );
 };
