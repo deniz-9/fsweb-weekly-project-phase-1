@@ -10,7 +10,16 @@ const ColorSelector = ({ colors, selectedColor, onColorChange }) => {
           className={`color-option ${selectedColor === color ? "selected" : ""}`}
           style={{ backgroundColor: color }}
           onClick={() => onColorChange(color)}
-        ></span>
+        >
+          {/* 
+          Fonksiyonların doğru, CSS'de hata varmış. .color-option display:inline-block olmalıymış. Çünkü
+          burada bir şey yazmadığından ve css'de de .color-option display:inline-block veya block olmadığından, dolayı burada boş, 0x0 boyutunda bir kutu oluşuyor. Ona da tıklanamıyor. 
+        
+        geçen ders sonrası paylaştığım mesajdaki bağlantıyı ekliyorum yine: 
+        HTML block ve inline elemanlar
+        https://www.w3schools.com/html/html_blocks.asp 
+        */}
+        </span>
       ))}
     </div>
   );
