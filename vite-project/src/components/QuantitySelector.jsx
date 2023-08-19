@@ -1,30 +1,34 @@
+
 import React, { useState } from "react";
 
-const QuantitySelector = ({ selectedQuantity, onQuantityChange }) => {
-  const [quantity, setQuantity] = useState(selectedQuantity);
+const QuantitySelector = ({ onQuantityChange }) => {
+  const [quantity, setQuantity] = useState(1);
 
-  const handleIncrement = () => {
-    if (quantity < 5) {
-      const newQuantity = quantity + 1;
-      setQuantity(newQuantity);
-      onQuantityChange(newQuantity);
-    }
+  const increaseQuantity = () => {
+    setQuantity(quantity + 1);
   };
 
-  const handleDecrement = () => {
+  const decreaseQuantity = () => {
     if (quantity > 1) {
-      const newQuantity = quantity - 1;
-      setQuantity(newQuantity);
-      onQuantityChange(newQuantity);
+      setQuantity(quantity - 1);
     }
   };
+
+  onQuantityChange(quantity);
 
   return (
-    <div className="quantity-selector">
-      <p>Adet Seç</p>
-      <button className="plus-button" onClick={handleDecrement}>-</button>
-      <span>{quantity}</span>
-      <button className="plus-button" onClick={handleIncrement}>+</button>
+    <div className="quantity-selector my-custom-class">
+      <p>Adet </p>
+      <div className="quantity-controls">
+        <button className="quantity-button" onClick={decreaseQuantity}>
+          -
+        </button>
+       
+        <span className="quantity">{quantity}</span>
+        <button className="quantity-button2" onClick={increaseQuantity}>
+          +
+        </button>
+      </div>
     </div>
   );
 };
