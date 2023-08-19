@@ -1,3 +1,9 @@
+// selectedColor ve onColorChange: Bu prop'lar, seçilen rengi belirlemek ve renk değişikliğini işlemek için kullanılır. İyi düşünülmüş.
+// .map kullanımı: Renk seçeneklerini döngü ile oluşturmak iyi bir yaklaşım.
+// key={index}: Bu kullanım, React'ın listeleri etkili bir şekilde işlemesine yardımcı olur. Ancak, index kullanmak bazen sorunlara yol açabilir. Eğer mümkünse, benzersiz bir değer kullanmak daha iyidir. Burada endişelenmeye gerek yok.
+// style={color}: Bu kısım, muhtemelen bir hata. style özelliği bir obje almalı. Örneğin: style={{ backgroundColor: color }}.
+// className: Seçilen renk için "selected" sınıfını dinamik olarak eklemek iyi bir yaklaşım.
+// Genel olarak, bu bileşen düzenli ve etkili. Yalnızca style özelliğinin düzeltilmesi gerekebilir.
 import React from "react";
 
 const ColorSelector = ({ colors, selectedColor, onColorChange }) => {

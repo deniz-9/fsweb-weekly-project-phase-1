@@ -1,3 +1,11 @@
+// handleColorChange, handleSizeChange, handleQuantityChange: Bu fonksiyonlar düzenli ve anlaşılır. İyi yapılmış.
+// imageUrl: Bu değişken kullanılmamış gibi görünüyor. Eğer kullanılmayacaksa kaldırılabilir.
+// colors ve sizes: Sabit değerler olarak tanımlanmış, bu iyi bir uygulama.
+// ClothingItem bileşeni: İki kez kullanılmış, ancak ikinci kullanım selectedColor'a bağlı. Bu, kullanıcının bir renk seçmesi durumunda görselin güncellenmesi için mi? Eğer öyleyse, ilk kullanımın yerine geçebilir.
+// ColorSelector, SizeSelector, QuantitySelector: Bu bileşenlerin kullanımı düzenli ve anlaşılır. Props'lar iyi bir şekilde geçirilmiş.
+// button: Sepete ekle butonu, handleSubmit fonksiyonuna bağlanmış. Bu kısım da düzenli.
+// Genel olarak, JSX kodu düzenli ve anlaşılır. İlk ClothingItem bileşeninin kullanımı üzerinde düşünmek isteyebilirsiniz.
+
 import React, { useState } from "react";
 import ClothingItem from "./components/ClothingItem";
 import ColorSelector from "./components/ColorSelector";

@@ -1,3 +1,5 @@
+
+// Genel olarak, bu bileşen sade, etkili ve düzenli. İyi yapılmış.
 import React, { useState } from "react";
 
 const QuantitySelector = ({ selectedQuantity, onQuantityChange }) => {

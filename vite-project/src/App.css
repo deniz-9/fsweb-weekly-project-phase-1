@@ -1,10 +1,15 @@
+/* 
+Genel olarak Flexbox proje geneline yayılabilir.
+.clothing-item img: İmaj boyutları sabitlenmiş, bu responsive tasarım için sorun olabilir. max-width kullanımı iyi bir tercih.
+.color-option: display: inline-block veya başka bir değer olmalı.
+Genel olarak, CSS kodu düzenli ve anlaşılır. Ancak, responsive tasarım için daha fazla düşünülmesi gerekebilir.
+*/
 .app {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   border: 1px solid #ccc;
-  
 }
 
 .left-section,
@@ -39,7 +44,6 @@
 .quantity-selector p {
   font-weight: bold;
   margin-bottom: 5px;
-  
 }
 
 .color-option {
@@ -53,7 +57,6 @@ body {
   background-color: white;
   color: black;
 }
-
 
 .size-option {
   margin: 10px;
