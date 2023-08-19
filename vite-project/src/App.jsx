@@ -12,6 +12,7 @@ const App = () => {
   const [selectedQuantity, setSelectedQuantity] = useState(1);
 
   const handleColorChange = (color) => {
+    console.log("Renk değişti:", color)
     setSelectedColor(color);
   };
 
