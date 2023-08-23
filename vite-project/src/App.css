@@ -34,13 +34,24 @@
   padding: 15px;
 }
 
-.color-selector p,
+/* .color-selector p,
 .size-selector p,
 .quantity-selector p {
+  
   font-weight: bold;
   margin-bottom: 5px;
   
+} */
+
+.color-selector p,
+.size-selector p,
+.quantity-selector p,
+.delivery-options p,
+.postal-code label {
+  font-weight: bold;
+  margin-bottom: 5px;
 }
+
 
 .color-selector {
   margin: 10px;
@@ -78,4 +89,71 @@ body {
  .size-variants label {
   margin-right: 10px; 
    } 
+
+   .delivery-dropdown {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .selected-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .arrow {
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: #333;
+    margin-left: 10px;
+  }
+  
+  .options-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    max-height: 120px;
+    overflow-y: auto;
+  }
+  
+  .options-list li {
+    padding: 8px 10px;
+    cursor: pointer;
+  }
+  
+  .postal-code {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+  }
+
+  .return-policy {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+  }
+  
+  .return-policy p {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .return-policy a {
+    color: blue;
+    text-decoration: underline;
+  }
+
+  .add-to-cart:hover {
+    background-color: #0056b3;
+  }
 

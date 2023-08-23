@@ -14,7 +14,7 @@ const QuantitySelector = ({ onQuantityChange }) => {
     }
   };
 
-  onQuantityChange(quantity);
+  // onQuantityChange(quantity);
 
   return (
     <div className="quantity-selector my-custom-class">

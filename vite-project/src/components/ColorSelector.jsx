@@ -5,12 +5,13 @@ const ColorSelector = ({ colors, selectedColor, onColorChange }) => {
     <div className="color-selector">
       <p>Renk Seç</p>
       {colors.map((color, index) => (
+
         <span
           key={index}
           className={`color-option ${selectedColor === color ? "selected" : ""}`}
-          style={{ backgroundColor: color }}
+          style={{ backgroundImage: "url('/assets/variations/" + color + ".png')" }}
           onClick={() => onColorChange(color)}
-        ></span>
+        >{color}</span>
       ))}
     </div>
   );
