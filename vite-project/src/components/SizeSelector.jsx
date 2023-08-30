@@ -3,7 +3,7 @@ import React from "react";
 const SizeSelector = ({ sizes, selectedSize, onSizeChange }) => {
   return (
     <div className="size-selector">
-      <p>Bedeni Seç</p>
+      <p className="size-option-title">Bedeni Seç :</p>
       {sizes.map((size, index) => (
         <button
           key={index}

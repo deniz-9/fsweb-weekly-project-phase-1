@@ -15,7 +15,7 @@ const App = () => {
   const [showOptions, setShowOptions] = useState(false);
   const [postalCode, setPostalCode] = useState("");
 
- 
+
 
   const handleColorChange = (color) => {
     setSelectedColor(color);
@@ -30,7 +30,7 @@ const App = () => {
     return `/assets/variations/${color}.png`;
   };
 
-  const initialImageUrl = "/assets/clothes-hanger_3159667.png";
+  // const initialImageUrl = "/assets/clothes-hanger_3159667.png";
 
   const imageUrl = selectedColor ? getImageUrl(selectedColor) : "";
 
@@ -75,32 +75,51 @@ const App = () => {
 
   const colors = ["beige", "gray-white", "green", "navy-green", "navy-lighblue", "navy-orange", "navy-red", "navy-white", "orange", "pink", "purple", "white", "white-red", "white-school"];
   const sizes = ["small", "medium", "large", "extra large", "XXL"];
-  const deliveryOptions = [ "PTT", "MNG Kargo", "Yurtiçi Kargo", "Aras Kargo"];
+  const deliveryOptions = ["PTT", "MNG Kargo", "Yurtiçi Kargo", "Aras Kargo"];
 
 
   return (
     <div className="app">
       <div className="left-section">
-        <ClothingItem imageUrl={initialImageUrl} />
+        <ClothingItem imageUrl={imageUrl} />
       </div>
       <div className="right-section">
         <p className="price">${totalPrice.toFixed(2)}</p>
-        <ColorSelector colors={colors} onColorChange={handleColorChange} />
+        <div className="color-quantity-container">
+          <ColorSelector colors={colors} onColorChange={handleColorChange} />
+        </div>
         {selectedColor && (
           <div className="selected-color-item">
             <ClothingItem imageUrl={imageUrl} />
           </div>
         )}
-        <SizeSelector sizes={sizes} onSizeChange={handleSizeChange} />
-        <QuantitySelector onQuantityChange={handleQuantityChange} />
 
 
+        <div className="size-quantity-container">
+          <SizeSelector sizes={sizes} onSizeChange={handleSizeChange} />
+          <QuantitySelector onQuantityChange={handleQuantityChange} />
+        </div>
+        <div className="color-options">
+          <p className="color-options-title">Renk Seçenekleri : </p>
+          <div className="color-names">
+            <div className="color-name">Bej</div>
+            <div className="color-name">Gri-Beyaz</div>
+            <div className="color-name">Yeşil</div>
+            <div className="color-name">Mor</div>
+            <div className="color-name">Pembe</div>
+            <div className="color-name">Beyaz</div>
+            <div className="color-name">Lacivert</div>
+            <div className="color-name">Turuncu</div>
+
+
+          </div>
+        </div>
         <button className="add-to-cart" onClick={handleSubmit}>
           Add To Card
         </button>
 
         <div className="delivery-options">
-          <p>Teslimat Seçenekleri</p>
+          <p className="delivery-options-title">Teslimat Seçenekleri : </p>
           <div className="delivery-dropdown">
             <div
               className="selected-option"
@@ -120,22 +139,27 @@ const App = () => {
                 ))}
               </ul>
             )}
-            <input
-              type="text"
-              placeholder="Teslimat uygunluğu için posta kodunu girin"
-              className="postal-code"
-              value={postalCode}
-              onChange={handlePostalCodeChange}
-            />
+            {/* <div className="input-container">  placeholder metnini kalınlaştırmak için css özelliğine bakın  */}
+              <input
+                type="text"
+                placeholder="Teslimat uygunluğu için posta kodunu girin"
+                className="postal-code"
+                value={postalCode}
+                onChange={handlePostalCodeChange}
+              />
+            {/* </div> */}
           </div>
         </div>
         <div className="return-policy">
-          <p>Ürün İadesi</p>
-          <p>30 gün için ürün iadesi ücretsiz</p>
+          <p className="return-policy-title">Ürün İadesi</p>
+          <p className="return-policy-details">
+    30 gün için ürün iadesi ücretsiz. <span className="return-policy-link">Detaylar</span>
+  </p>
+          {/* <p>30 gün için ürün iadesi ücretsiz</p>
           <p>
-            Detaylar:{" "}
+            Detaylar:{" "} */}
             <a href="#">Buraya tıklayın</a>
-          </p>
+          {/* </p> */}
         </div>
       </div>
     </div>

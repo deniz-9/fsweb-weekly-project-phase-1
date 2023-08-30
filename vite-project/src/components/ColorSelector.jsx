@@ -3,7 +3,7 @@ import React from "react";
 const ColorSelector = ({ colors, selectedColor, onColorChange }) => {
   return (
     <div className="color-selector">
-      <p>Renk Seç</p>
+      <p className="color-option-title-one">Renk Seç : </p>
       {colors.map((color, index) => (
 
         <span

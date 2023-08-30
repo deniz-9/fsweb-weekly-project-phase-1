@@ -1,40 +1,55 @@
   .app {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  border: 1px solid #ccc;
-  
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
 
-.left-section,
-.right-section {
-  margin: 5px;
-  flex: 1;
-}
+  }
 
-.clothing-item img {
-  width: 250px;
-  height: 250px;
-  border-radius: 15px;
-  
-  max-width: 100%;
-}
+  .left-section,
+  .right-section {
+    margin: 5px;
+    flex: 1;
+  }
 
-.price {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 10px;
-}
+  .clothing-item img {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
 
-.color-selector,
-.size-selector,
-.quantity-selector {
-  margin-top: 20px;
-  padding: 15px;
-}
+    max-width: 100%;
+  }
 
-/* .color-selector p,
+  .price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .color-selector,
+  .size-selector,
+  .quantity-selector {
+    margin-top: 20px;
+    padding: 15px;
+  }
+
+  .color-options-title,
+  .size-option-title,
+  .quantity-option-title,
+  .delivery-options-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .color-options-title-one {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  /* .color-selector p,
 .size-selector p,
 .quantity-selector p {
   
@@ -43,58 +58,86 @@
   
 } */
 
-.color-selector p,
-.size-selector p,
-.quantity-selector p,
-.delivery-options p,
-.postal-code label {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
+  .color-selector p,
+  .size-selector p,
+  .quantity-selector p,
+  .delivery-options p,
+  .postal-code label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
 
 
-.color-selector {
-  margin: 10px;
-}
+  .color-selector {
+    margin: 10px;
+  }
 
-.color-option {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: inline-block
-}
+  .color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
 
-body {
-  background-color: white;
-  color: black;
-}
+  .color-names {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+  }
+
+  .color-name {
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    background-color: blueviolet;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  .color-quantity-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  body {
+    background-color: white;
+    color: black;
+  }
 
 
   .size-option {
-    margin: 10px; 
+    margin: 10px;
+    background-color: blueviolet;
   }
 
+  .my-custom-class {
+    margin: 10px;
 
- .my-custom-class {
-  margin: 10px; /* Yukarıda 10 piksel boşluk ekler */
-}
+  }
 
-.quantity-button {
-  margin-right: 8px;
-}
+  .quantity-button {
+    margin-right: 8px;
+    background-color: aqua;
+  }
 
-.quantity-button2 {
-  margin-left: 8px;
-}
- .size-variants label {
-  margin-right: 10px; 
-   } 
+  .quantity-button2 {
+    margin-left: 8px;
+    background-color: aqua;
+  }
 
-   .delivery-dropdown {
+  .size-variants label {
+    margin-right: 10px;
+  }
+
+  .delivery-dropdown {
     position: relative;
     cursor: pointer;
   }
-  
+
   .selected-option {
     display: flex;
     align-items: center;
@@ -103,7 +146,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-  
+
   .arrow {
     width: 0;
     height: 0;
@@ -111,7 +154,7 @@ body {
     border-top-color: #333;
     margin-left: 10px;
   }
-  
+
   .options-list {
     position: absolute;
     top: 100%;
@@ -124,36 +167,79 @@ body {
     max-height: 120px;
     overflow-y: auto;
   }
-  
+
   .options-list li {
     padding: 8px 10px;
     cursor: pointer;
   }
-  
+
   .postal-code {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
     box-sizing: border-box;
+    background-color: #00c5cd;
   }
 
-  .return-policy {
-    margin-top: 20px;
-    padding-top: 10px;
-    border-top: 1px solid #ccc;
+  .return-policy-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
   }
-  
+
+  .return-policy-details {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #666;
+  }
+
+  .return-policy-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+
+  .return-policy-link:hover {
+    text-decoration: underline;
+  }
+
+
   .return-policy p {
     font-weight: bold;
     margin-bottom: 5px;
   }
-  
+
   .return-policy a {
     color: blue;
     text-decoration: underline;
+  }
+
+  .add-to-cart {
+    background-color: #009acd;
   }
 
   .add-to-cart:hover {
     background-color: #0056b3;
   }
 
+  /*  PLACEHOLDER METNİNİ KALINLAŞTIRMA*/
+
+
+  /* .input-container {
+    position: relative;
+  }
+  
+  .input-container input::placeholder {
+    opacity: 0;
+  }
+  
+  .input-container::before {
+    content: "Teslimat uygunluğu için posta kodunu girin";
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  } */

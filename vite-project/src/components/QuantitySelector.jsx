@@ -18,7 +18,7 @@ const QuantitySelector = ({ onQuantityChange }) => {
 
   return (
     <div className="quantity-selector my-custom-class">
-      <p>Adet </p>
+      <p className="quantity-option-title">Adet :</p>
       <div className="quantity-controls">
         <button className="quantity-button" onClick={decreaseQuantity}>
           -
